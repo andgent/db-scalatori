@@ -1,0 +1,5 @@
+1)
+SELECT distinct s.cf, n.continente
+FROM scalatore as s, nazione as n, scalata 
+WHERE s.cf = scalata.scalatore
+
