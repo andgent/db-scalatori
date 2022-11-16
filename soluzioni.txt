@@ -3,3 +3,8 @@ SELECT distinct s.cf, n.continente
 FROM scalatore as s, nazione as n, scalata 
 WHERE s.cf = scalata.scalatore
 
+2)
+SELECT distinct s.cf, n.continente
+FROM nazione as n, scalatore as s, scalata
+WHERE s.annonascita < 1980 and scalata.scalatore = s.cf and n.nome = scalata.nazione
+ORDER BY s.cf, n.continente
