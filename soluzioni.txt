@@ -28,6 +28,8 @@ FROM scalata JOIN nazione ON nazione.nome = scalata.nazione
 WHERE nazione.continente = nazione2.continente
 GROUP BY nazione.continente
 
-
-
-6)
+6) 
+SELECT scalatore.cf, scalata.nazione, nazione.continente, scalata.nazione
+FROM scalatore LEFT JOIN scalata ON scalatore.cf = scalata.scalatore
+               JOIN nazione ON nazione.nome = scalatore.nazionenascita
+WHERE nazione.continente != 'America'
