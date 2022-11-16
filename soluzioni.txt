@@ -13,3 +13,9 @@ ORDER BY s.cf, n.continente
 SELECT distinct n.nome, n.continente
 FROM nazione as n, scalata, scalatore as s
 WHERE scalata.anno - s.annonascita <= 18 and n.nome = scalata.nazione
+
+4)
+SELECT s.nazionenascita, count(scalata.anno)
+FROM nazione as n, scalata, scalatore as s
+where n.nome = s.nazionenascita and s.cf = scalata.scalatore
+GROUP BY s.nazionenascita
